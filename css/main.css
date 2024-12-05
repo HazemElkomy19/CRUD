@@ -1,0 +1,71 @@
+
+body{
+  background-color: #F7ECDE;
+  font-family: "PT Sans Caption", sans-serif;
+}
+.dotted{
+  
+  border: none;
+  height: 2px; /* Adjust the size of the squares */
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+      to right,
+      black,
+      black 2px, /* Square size */
+      transparent 2px,
+      transparent 4px /* Spacing between squares */
+  );
+  margin: 20px 0;
+
+  
+}
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-size: 50px;
+  font-style: normal;
+  color: rgb(53, 46, 40);
+z-index: 1111;
+position: relative;
+}
+h2{
+  font-family: "Righteous", sans-serif;
+  font-size: 25px;
+
+ 
+  background: linear-gradient(to right,#4caf50, #b2ac49);
+  background-size:68%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+
+
+
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 50px;
+  left: 41%;
+  width: 270px;
+  height: 20px;
+  z-index: -1;
+  background-color: rgb(255, 184, 77);
+  transition: height 0.3s ease-in-out;
+ 
+}
+
+.title-container:hover::after {
+  height: 27%;
+
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: rgb(255, 184, 77);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(255, 184, 77, 0.5);
+}
